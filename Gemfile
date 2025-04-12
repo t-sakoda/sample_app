@@ -27,10 +27,6 @@ group :development do
   gem "solargraph",          "0.53.4"
   gem "irb",                 "1.10.0"
   gem "repl_type_completor", "0.1.2"
-
-  gem 'ruby-lsp'
-  gem 'ruby-lsp-rubyfmt'
-  gem "ruby-lsp-rspec", require: false
 end
 
 group :test do
