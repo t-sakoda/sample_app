@@ -33,6 +33,6 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal name,  @user.name
     assert_equal email, @user.email
     # 次回以降のログインでは転送先のURLをデフォルトのプロフィール画面に戻しておく必要がある
-    assert_equal session[:forwarding_url], nil
+    assert_nil session[:forwarding_url]
   end
 end
