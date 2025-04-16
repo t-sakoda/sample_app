@@ -4,9 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.2.8"
 
 gem "rails",           "7.1.5.1"
+gem 'active_storage_validations', '2.0.2'
 gem "bcrypt",          "3.1.20"
 gem 'faker',           "3.5.1"
-gem "will_paginate",           "4.0.1"
+gem "will_paginate",                 "4.0.1"
 gem 'will_paginate-bootstrap-style', "0.3.0"
 gem "bootstrap-sass",  "3.4.1"
 gem "sassc-rails",     "2.1.2"
