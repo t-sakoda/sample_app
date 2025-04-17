@@ -69,6 +69,18 @@ class MicropostsSidebarTest < MicropostsInterface
     get root_path
     assert_match "1 micropost", response.body
   end
+
+  # フォロー数を表示すること
+  test "should display the right following count" do
+    get root_path
+    assert_select 'a[href=?]', following_user_path(@user), text: /#{@user.following.count}\s+following/
+  end
+
+  # フォロワー数を表示すること
+  test "should display the right followers count" do
+    get root_path
+    assert_select 'a[href=?]', followers_user_path(@user), text: /#{@user.followers.count}\s+followers/
+  end
 end
 
 class ImageUploadTest < MicropostsInterface
